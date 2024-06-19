@@ -1,0 +1,423 @@
+* {box-sizing: border-box;}
+
+/* Body styles */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100vw; /* Set container width to full viewport width */
+  height: 100vh; /* Set container height to full viewport height */
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  margin-bottom: 50px;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  width: 100%; /* Set slide width to full container width */
+  height: 100%; /* Set slide height to full container height */
+  background-size: cover; /* Cover the entire slide with the background image */
+  background-position: top left; /* Position the background at the top left corner */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Left corner text */
+.left-corner-text {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  color: #fff; /* Text color */
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: rgb(64, 141, 141);
+}
+
+/* Hero Section Styling */
+.imgs {
+  padding: 150px;
+  background-image: url('https://t3.ftcdn.net/jpg/06/06/50/94/360_F_606509451_fSeyxuE8NUX41WNzuKP7FwRVsrKNC7fl.jpg'); /* Replace with your desired background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imgs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cont {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+}
+
+/* Course Section Styling */
+.courses {
+  color: rbg(86,182,182);
+  font-size: 20px;
+  padding: 30px;
+  font-family: sans-serif;
+  justify-content: center;
+  text-align: center;
+}
+
+h1#gap {
+  margin-top: -40px;
+}
+
+h1#head {
+  color: black;
+  font-family: sans-serif;
+}
+
+/* Course Boxes Styling */
+.cover {
+  width: 700px;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+}
+
+.box {
+  background-color: #f5DEB3;
+  margin-left: 100px;
+  width: 800px;
+  height: 200px;
+}
+
+.box h2 {
+  margin-left: 30px;
+}
+
+img {
+  width: 300px;
+  height: 150px;
+}
+
+/* Duplicate Course Box Styling (Optional) */
+.cover-1 {
+  width: 700px;
+  height: 300px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.box1 {
+  background-color: #f5DEB3;
+  margin-left: 100px;
+  width: 800px;
+  height: 200px;
+}
+
+.box1 h2 {
+  margin-left: 10px;
+}
+
+/* Review Section Styling (Optional) */
+.review {
+  color: rgb(115, 194, 194);
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.reviews {
+  width: 900px;
+  height: 400px;
+  margin-top: 50px;
+  display: flex;
+}
+
+.std {
+  margin-left: 30px;
+  width: 800px;
+  height: 400px;
+}
+
+.img {
+  width: 200px
+}
+
+
+section.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping to the next line if the screen is too narrow */
+}
+
+.btn {
+  width: 200px; /* Set button width */
+  height: 200px; /* Set button height */
+  background-color: #f5deb3; /* Adjust button color */
+  color: black; /* Set button text color */
+  border: none; /* Remove button border */
+  border-radius: 50px; /* Add rounded corners */
+  text-align: center; /* Center button text */
+  font-size: 18px; /* Adjust button text size */
+  cursor: pointer; /* Indicate clickable element */
+  margin: 0 65px; /* Adjust horizontal spacing */
+  margin-bottom: 50px; /* Adjust vertical spacing */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+.btn i {
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.btn span {
+  display: block; /* Make text behave like a block element */
+  font-size: 18px; /* Adjust font size if needed */
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  margin: 0 auto; /* Center the container horizontally */
+  width: 90%; /* Set a maximum width for the container */
+  padding-top: 150px;
+  background-color:#f5DEB3;
+  
+}
+
+.container img {
+  width: 350px; /* Adjust image width as needed */
+  height:200px;
+  margin-right: 200px; /* Add space between image and text */
+  margin-left: 100px;
+}
+
+.text-content {
+  flex: 1; /* Allow text content to fill remaining space */
+  margin-bottom: 200px;
+}
+
+
+.container{
+ 
+  margin:auto
+}
+.row{
+  display:flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+  color: #fff;
+  margin-left: -30px;
+}
+button {
+/* Basic styles for the button */
+background-color: black; /* Green color */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+}
+
+.container{
+margin:auto
+}
+.row{
+display:flex;
+flex-wrap: wrap;
+}
+ul{
+list-style: none;
+color: #fff;
+margin-left: -30px;
+}
+
+.footer{
+background-color: black;
+padding:70px 0;
+margin-top: 100px;
+}
+.footer-col{
+width:20%;
+padding:0 15px;
+background-color: black;
+}
+.footer-col h3{
+background-color: black;
+color:#fff;
+display: flex;
+text-transform: capitalize;
+margin-bottom: 30px;
+font-weight: 500;
+position: relative;
+}
+.footer-col h3::before{
+background-color: black;
+content:'';
+position: absolute;
+left:0;
+bottom:-10px;
+background-color:#e91e63 ;
+height:2px;
+box-sizing: border-box;
+width:50px;
+}
+
+.footer-col ul li:not(:last-child){
+background-color: black;
+margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+background-color: black;
+font-size: 16px;
+text-transform: capitalize;
+color: #fff;
+text-decoration: none;
+font-weight: 300;
+display:block;
+}
+
+
+.containe {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 150px;
+  background-color: #f5DEB3;
+}
+
+.mission-heading {
+  text-align: center; /* Center the heading text */
+  margin-bottom: 100px; /* Add spacing below the heading */
+}
+
+.content-wrapper {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  width: 100%; /* Full width */
+}
+
+.text-content {
+  flex: 1; /* Allow text content to grow */
+  margin-right: 20px; /* Add space between text and image */
+}
+
+.text-content h2 {
+  margin-bottom: 20px;
+  margin-left:30px; /* Add spacing between paragraphs */
+}
+
+.containe img {
+  width: 350px;
+  height: 200px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
